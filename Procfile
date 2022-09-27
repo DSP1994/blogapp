@@ -1,0 +1,1 @@
+web: djangoblog.wsgi
