@@ -2,13 +2,53 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
-      <div class="card-body">
+    <div class="col-md-6 masthead-text">
         <h1>{% block title %} {{ blog.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ blog.author }} | {{ blog.created_on }}</p>
-        <p class="card-text ">{{ blog.content | safe }}</p>
-      </div>
     </div>
+    <div class="d-none d-md-block col-md-6 masthead-image">
+        {% if "placeholder" in post.featured_image.url %}
+        <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg" width="100%">
+        {% else %}
+        <img src=" {{ post.featured_image.url }}" width="100%">
+        {% endif %}        
+    </div>
+    <div class="card-body">
+        <p class="card-text ">{{ blog.content | safe }}</p>
+        <div class="row">
+            <div class="col-1">
+                <strong class="text-secondary"><i class="far fa-heart">{{ blog.number_of_likes }}</i></strong>
+            </div>
+            <div class="col-1">
+                {% with comments.count as total_comments %}
+                <strong class="text-secondary"><i class="far fa-comments">{{ total_comments }}</i></strong>
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 card mb-4">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                  <p class="font-weight-bold">
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                      {{ comment.created_on }}
+                    </span> wrote:
+                  </p>
+                  {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}                
+            </div>
+        </div>
+    </div>       
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
   </div>
 </div>
