@@ -3,8 +3,8 @@ from .models import Blog, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Post)
-class PostAdmin(SummernoteModelAdmin):
+@admin.register(Blog)
+class BlogAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     list_filter = ('status', 'created_on')
     search_fields = ['title', 'content']
@@ -15,7 +15,7 @@ class PostAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
 
-    list_display = ('name', 'body', 'post', 'created_on', 'active')
+    list_display = ('name', 'body', 'blog', 'created_on', 'active')
     list_filter = ('active', 'created_on')
     search_fields = ('name', 'email', 'body')
     actions = ['approved_comments']
