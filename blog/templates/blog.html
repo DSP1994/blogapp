@@ -5,12 +5,19 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class=" col-md-8 col-md-10 mx-auto">
+            <div class="col-md-8 masthead-text mx-auto">
                 <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white"> Welcome To My Blog! </h3>
+                    <h3 class="my-4 mt-3 text-white"> Welcome To My Blog! </h3>
                     <p class="text-dark">I hope you enjoy your stay! &nbsp
                     </p>
                 </div>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in post.featured_image.url %}
+                <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg" width="100%">
+                {% else %}
+                <img src=" {{ post.featured_image.url }}" width="100%">
+                {% endif %}        
             </div>
         </div>
     </div>
