@@ -49,6 +49,20 @@
                 {% endfor %}                
             </div>
         </div>
+        <div class="card-body">
+            {% if new_comment %}
+            <div class="alert alert-success" role="alert">
+                Your Comment Is Awaiting Approval
+            </div>
+            {% else %}
+            <h4>Leave a comment:</h4>
+            <form method="post">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="button" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+            {% endif %} 
+        </div>
     </div>       
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
   </div>
