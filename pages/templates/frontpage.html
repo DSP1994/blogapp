@@ -1,4 +1,13 @@
 {% extends 'base.html' %} 
 {% block content %}
-<h1>Hello World</h1>
+<div id="frontpage-img" class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white d-flex justify-content-center align-items-center" 
+style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg); height: 100vh; width: 100%; background-size: cover;">
+    <div class="card-body text-white">
+        <h2 class="card-title">My First Blog</h2>
+        <p class="card-text">
+          Thank you for finding my blog! Please feel free to drop a comment about what you've enjoyed! 
+        </p>
+        <a href="{% url 'blog.html' %}" class="btn btn-outline-light">Get Started!</a>
+      </div>
+</div>
 {% endblock content %}
