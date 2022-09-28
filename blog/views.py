@@ -27,6 +27,38 @@ class BlogDetail(View):
             {
                 'post': post,
                 'comments': comments,
+                'new_comment': False,
+                'liked': liked,
+                'comment_form': CommentForm()
+            },
+        )
+    
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Blog.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(active=True).order_by('created_on')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commnit=False)
+            comment.post = post
+            comment.save()
+        else:
+            comment_form = CommentForm()
+        
+        return render(
+            request,
+            'blog_details.html',
+            {
+                'post': post,
+                'comments': comments,
+                'new_comment': True,
                 'liked': liked,
                 'comment_form': CommentForm()
             },

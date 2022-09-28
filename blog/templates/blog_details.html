@@ -55,12 +55,14 @@
                 Your Comment Is Awaiting Approval
             </div>
             {% else %}
+            {% if user.is_authenticated %}
             <h4>Leave a comment:</h4>
             <form method="post">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <button type="button" class="btn btn-primary btn-lg">Submit</button>
             </form>
+            {% endif %}
             {% endif %} 
         </div>
     </div>       
