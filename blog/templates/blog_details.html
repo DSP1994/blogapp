@@ -4,8 +4,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 masthead-text">
-        <h1>{% block title %} {{ blog.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ blog.author }} | {{ blog.created_on }}</p>
+        <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
     </div>
     <div class="d-none d-md-block col-md-6 masthead-image">
         {% if "placeholder" in post.featured_image.url %}
@@ -15,7 +15,7 @@
         {% endif %}        
     </div>
     <div class="card-body">
-        <p class="card-text">{{ blog.content | safe }}</p>
+        <p class="card-text">{{ post.content | safe }}</p>
         <div class="row">
             <div class="col-1">
                 <strong class="text-secondary"><i class="far fa-heart">{{ blog.number_of_likes }}</i></strong>
