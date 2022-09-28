@@ -30,6 +30,12 @@ body {
     color: white;
 }
 
+/* Blog Details
+.overflow{
+        height:50px;
+        overflow-y: scroll;
+} */
+
 /* Masthead */
 .masthead-text {
     background-color: #445261;
