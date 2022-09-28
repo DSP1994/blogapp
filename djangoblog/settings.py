@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     # my apps
     'blog',
     'pages',
-    'membership',
 ]
 
 SITE_ID = 1
