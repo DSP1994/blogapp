@@ -28,7 +28,7 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
                         <a href="{% url 'blog_details.html' blog.slug  %}" class="blog-txt-btn blog-hover blog-txt-btn">Read More &rarr;</a>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:2%}
+                {% if forloop.counter|divisibleby:3%}
             </div>
             <div class="row">
                 {% endif %} 
