@@ -1,0 +1,80 @@
+/* ------------------------ Base Colors ------------------------*/
+:root{
+    --red:#8E1205;
+    --white: #FFFFFF;
+    --green: #1BB23E;
+    --d-green:#28AC47;
+}
+
+body{
+    background-color: var(--white);
+}
+
+/* ------------------------ Front Page ------------------------*/
+.fp-title-text{
+    color: var(--green);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.fp-text{
+    color: var(--green);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.fp-text-button{
+    color: var(--green);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--green);
+    display: inline;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: var(--d-green);
+    line-height: 1.5;
+    border-radius: .5rem;
+}
+
+.fp-hover {
+    box-shadow: inset 0 0 0 0 var(--d-green);
+    color: var(--d-green);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+    .fp-hover:hover {
+        box-shadow: inset 100px 0 0 0 var(--d-green);
+        color: white;
+  }
+
+/* ------------------------ Navigation ------------------------*/
+.nav-shadow{
+    box-shadow: 0 1rem 3rem #E3E7EB    
+}
+
+.nav-light{
+    background-color: var(--white);
+}
+
+
+/* ------------------------ **MEDIA** ------------------------*/
+/* Sm. Devices (tablets, 768px and up */
+@media (min-width: @screen-sm-min){
+
+}
+
+/* Md. Devices (992px and up) */
+@media (min-width: @screen-md-min) {
+    
+}
+
+/* Lg. Devices (1200px and up) */
+@media (min-width: @screen-lg-min) {
+    
+}

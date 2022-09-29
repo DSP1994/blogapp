@@ -17,20 +17,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
+        <!-- Static / Style -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">        
+
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous" />
 
-        <!-- Static / Style -->
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
 
     <body>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light nav-shadow" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand text-black" href="{% url 'frontpage' %}">My Blog</a>
+                <a class="navbar-brand color" href="{% url 'frontpage' %}">My Blog</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
