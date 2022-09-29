@@ -12,13 +12,9 @@ body {
     background-color: #f00000;
     border-color: #dc281e;
 }
-.masthead {
-    background: #3398E1;
-    height: auto;
-    padding-bottom: 15px;
+/* .masthead {
     box-shadow: 0 16px 48px #E3E7EB;
-    padding-top: 10px;
-}
+} */
 
 /* Side Bar */
 .card{
@@ -37,11 +33,11 @@ body {
 } */
 
 /* Masthead */
-.masthead-text {
-    background-color: #3398E1;
+/* .masthead-text {
+    background-color: transparent;
     color: white;
     position: relative;
-}
+} */
 
 .masthead-image {
     position: relative;
