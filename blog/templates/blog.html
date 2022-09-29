@@ -9,7 +9,7 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 masthead-text mx-auto">
+                <div class="col-md-8 mt-4 mb-2 masthead-text mx-auto">
                     <div class="site-heading">
                         <h2 class="my-4 mt-3 text-white"> Welcome To My Blog! </h2>
                         <p class="text-light">I hope you enjoy your stay! &nbsp
@@ -39,7 +39,7 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
                         <a href="{% url 'blog_details.html' blog.slug  %}" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:4%}
+                {% if forloop.counter|divisibleby:2%}
             </div>
             <div class="row">
                 {% endif %} 

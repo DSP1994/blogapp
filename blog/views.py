@@ -8,7 +8,7 @@ class BlogList(generic.ListView):
     model = Blog
     queryset = Blog.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog.html'
-    paginate_by = 4
+    paginate_by = 2
 
 
 class BlogDetail(View):

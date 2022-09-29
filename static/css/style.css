@@ -20,11 +20,6 @@ body {
     box-shadow: 0 16px 48px #E3E7EB;
 }
 
-/* Blog */
-.head_text {
-    color: white;
-}
-
 /* Blog Details
 .overflow{
         height:50px;
@@ -42,3 +37,4 @@ body {
     position: relative;
     overflow: hidden;
 }
+
