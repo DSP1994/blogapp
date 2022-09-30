@@ -3,54 +3,54 @@
 {% load static %}
 
 {% block content %}
-<header class="masthead">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class=" col-md-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white">The Contact Page</h3>
-                    <p class="text-light">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-                        a matter of hours to help you.</p>
-                </div>
-            </div>
+{% load crispy_forms_tags %}
+<div class="bg-image text-center shadow-1-strong rounded" 
+style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg); height: 100vh; width: 100%; background-size: cover;">
+    <header class="header">
+        <div class="overlay">
+            <h1>
+                The Contact Page
+            </h1>
+            <p>
+                Do you have any questions? Please contact me directly. I will get back to you ASAP!
+            </p>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- Form -->
-<div class="container mt-5">
-    <div class="row">
-        <!--Grid column-->
-        <div class="col-md-6">
-            <form class="card p-3" method="POST">
-                {% csrf_token %}
-                {{ form | crispy }}
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        <!-- Messages from backend -->
-        {% for message in messages %}
-            {% if message.tags == 'success' %}
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">{{ message }}
-                <a href="{% url 'home' %}" type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
+    <!-- Form -->
+    <div class="container mt-5">
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-6">
+                <form class="card p-3" method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            <!-- Messages from backend -->
+            {% for message in messages %}
+                {% if message.tags == 'success' %}
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">{{ message }}
+                    <a href="{% url 'home' %}" type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
+                </div>
+                {% endif %}
+            {% endfor %}
             </div>
-            {% endif %}
-        {% endfor %}
-        </div>
-        <!--Grid column-->
-        <div class="col-md-4 ml-4 float-right">
-            <div class="card pt-3 text-center">
-                <ul class="list-unstyled mb-0">
-                    <li><i class="fa fa-solid fa-map fa-2x mb-3"></i>
-                        <p class="card-header">Some Random House, United Kingom</p>
-                    </li>
-                    <li><i class="fa fa-phone mt-4 fa-2x mb-3"></i>
-                        <p class="card-header">+44 77123 456 789</p>
-                    </li>
-                    <li><i class="fa fa-envelope mt-4 fa-2x mb-3"></i>
-                        <p class="card-header">contact@dsp1994.com</p>
-                    </li>
-                </ul>
+            <!--Grid column-->
+            <div class="col-md-4 ml-4 float-right">
+                <div class="card pt-3 text-center">
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fa fa-solid fa-map fa-2x mb-3"></i>
+                            <p class="card-header">Some Random House, United Kingom</p>
+                        </li>
+                        <li><i class="fa fa-phone mt-4 fa-2x mb-3"></i>
+                            <p class="card-header">+44 77123 456 789</p>
+                        </li>
+                        <li><i class="fa fa-envelope mt-4 fa-2x mb-3"></i>
+                            <p class="card-header">contact@email.com</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About
+from .models import About, Contact
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -10,3 +10,9 @@ class AboutAdmin(SummernoteModelAdmin):
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content')
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'body',  'created_on')
+    search_fields = ('name', 'email', 'body')

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail, BadHeaderError
 from django.views import generic, View
-from .models import About
+from .models import About, Contact
 from .forms import ContactForm
 
 
@@ -26,25 +26,27 @@ class AboutDetail(View):
         )
 
 
-def contact_form(request):
-    form = ContactForm(request.POST)
+class ContactPage(View):
+    model = Contact
+    template_name = 'contact.html'
 
-    if request.method == 'POST':
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Redirect Succesful!")
-            return HttpResponseRedirect('/')
-    
-    context = {
-        "form": form
-    }
+    def contact_form(request):
+        form = ContactForm(request.POST)
 
-    return render(request, "contact.html", context)
+        if request.method == 'POST':
+            if form.is_valid():
+                form.save()
+                messages.success(request, "Redirect Succesful!")
+                return HttpResponseRedirect('/')
+        
+        context = {
+            'name': name,
+            'email': email,
+            'body': body,
+        }
+
+        return render(request, "contact.html", context)
 
 
 def frontpage(request):
     return render(request, 'frontpage.html')
-
-
-def contact_page(request):
-    return render(request, 'contact.html')
