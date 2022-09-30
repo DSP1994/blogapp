@@ -1,7 +1,12 @@
-from django.shortcuts import render
-# from django.views import generic, View
-# from .models import FrontPage
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
+from .models import About
 
+
+class AboutSect(generic.View):
+    model = About
+    queryset = About.objects.filter(status=1)
+    template_name = about.html
 
 # class FrontPage(View):
 #     model = FrontPage
