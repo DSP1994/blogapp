@@ -7,7 +7,7 @@
 style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg); height: 100vh; width: 100%; background-size: cover;">
     <header class="header">
         <div class="overlay">
-            <h1>About Me Page</h1>
+            <h1>About Me Page!</h1>
             <p>Some text about who I am.</p>
         </div>
     </header>
@@ -16,35 +16,10 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
             <div class="col-md-8 mt-5">
                 <div class="card mb-4">
                     <div class="card-body overflow-auto">
-                        <h2 class="card-header about-title">Title</h2>
-                        <br>
-                        <p class="card-text about-txt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et tincidunt lacus. Mauris finibus ultrices mattis. 
-                            Nunc et euismod diam. Vestibulum id orci tempor, tempus tortor id, tempor magna. Donec in porta nibh. Nullam eu congue turpis, quis pellentesque nunc. 
-                            Proin sagittis ipsum eget malesuada congue. Fusce maximus odio metus, quis feugiat lacus bibendum eget. Vestibulum non scelerisque felis, eu sagittis justo. 
-                            Integer mollis finibus elit, non eleifend sem interdum non. Maecenas imperdiet suscipit justo, a bibendum magna scelerisque eget. In nec tincidunt ligula. 
-                            Curabitur nec lacus sed est venenatis euismod nec tempus orci. Suspendisse consequat sodales magna sit amet facilisis.
-                        </p>
-                        <p class="card-text about-txt">
-                            Aenean tincidunt risus sed accumsan pretium. Sed iaculis risus nec ex luctus, vitae fermentum felis convallis. 
-                            Quisque non vulputate lorem. Aliquam erat volutpat. Vestibulum ultricies ornare dolor, sit amet accumsan augue tincidunt id. 
-                            Aliquam condimentum eu lacus quis congue. Fusce neque turpis, efficitur eu venenatis ac, condimentum id erat. Nunc ac velit sed purus ornare finibus. 
-                            Maecenas faucibus ante leo, in sagittis est elementum ac. Mauris condimentum enim sit amet nunc porta auctor. Etiam consequat, velit sit amet hendrerit mattis, 
-                            justo ligula ultrices augue, sit amet ultrices felis risus quis dolor. In sagittis dapibus leo, in rutrum nisl. Suspendisse commodo leo ultrices, viverra eros in, 
-                            rutrum quam. Suspendisse potenti.
-                        </p>
-                        <p class="card-text about-txt">
-
-                            Integer felis est, ornare quis faucibus eget, tristique at lectus. Nulla at imperdiet nibh, ac bibendum ligula. Sed non dictum sem, et fringilla libero. 
-                            Etiam nec est eros. In hac habitasse platea dictumst. Aliquam sed lobortis neque. Cras gravida risus eget purus dapibus hendrerit. 
-                            Suspendisse malesuada turpis ac accumsan pretium. Aenean blandit mauris quis libero lobortis, a porttitor quam gravida. Proin ut libero semper enim sodales ultrices. 
-                            Etiam sed velit nec dolor consequat varius.
-                        </p>
-                        <p class="card-text about-txt">
-                            Donec eget magna molestie, molestie lacus non, commodo massa. Praesent vehicula nisl ac porta dignissim. Fusce nec massa et lacus tristique aliquet. 
-                            Nunc non laoreet odio. Duis id eleifend massa. Donec nulla sapien, blandit sit amet hendrerit ut, molestie nec elit. Duis fermentum pellentesque felis, 
-                            sed fringilla lorem dignissim non. Duis molestie eu justo sed dapibus.
-                        </p>
+                        {% for post in about_sect %}
+                        <h2 class="card-header about-title">{{ about.title }}</h2>
+                        <p class="card-text h6 blog-txt">{{ about.content | safe }}</p>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

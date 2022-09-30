@@ -12,7 +12,7 @@ class BlogList(generic.ListView):
 
 
 class BlogDetail(View):
-    
+   
     def get(self, request, slug, *args, **kwargs):
         queryset = Blog.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
