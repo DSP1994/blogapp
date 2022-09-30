@@ -56,6 +56,14 @@ p, a, button {
     font-size: larger;
 }
 
+/* ------------------------ Overflow Sections ------------------------ */
+
+.overflow-auto{
+    overflow-y: scroll;
+    min-height: 0px;
+    height: 60vh;  
+}
+
 /* ------------------------ Front Page Section ------------------------*/
 
 .fp-title-text{
@@ -137,18 +145,14 @@ p {
 	margin-bottom: 1.8rem;
 }
 
-.text-shadwo{
-    box-shadow: 0 1rem 3rem #E3E7EB
-}
-
-.blog-title-text{
+.blog-title-txt{
     color: var(--green);
     font-size: 1.2rem;
     
 }
 
-.blog-text{
-    color: var(--green);
+.blog-txt{
+    color: var(--green)!important;
     font-size: .8rem;
     font-weight: 600;
 }
@@ -219,12 +223,6 @@ p {
 
 /* ------------------------ About Section ------------------------*/
 
-.overflow-auto{
-    overflow-y: scroll;
-    min-height: 0px;
-    height: 60vh;  
-}
-
 .about-title{
     color: var(--green);
     font-size: 2.5rem;
@@ -240,6 +238,9 @@ p {
 /* Sm. Devices (tablets, 768px and up */
 @media (max-width: 768px){
     div.optdis{
+        display: none;
+    }
+    p.optdis{
         display: none;
     }
 }
