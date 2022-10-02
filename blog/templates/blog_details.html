@@ -24,7 +24,7 @@
             <div class="col-2">
                 <strong>
                     {% if user.is_authenticated %} 
-                    <form action="{% url blog_like' post.slug %}"  method="POST" class="d-line">
+                    <form action="{% url 'blog_like' post.slug %}"  method="POST" class="d-line">
                         {% csrf_token %}
                         {% if liked %}
                         <button class="btn-like" type="submit" name="blogpost_id" value="{{post.slug}}">
@@ -37,10 +37,10 @@
                         {% endif %}
                     </form>
                     {% else %}
-                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+                    <span class="text-secondary">{{ blog.number_of_likes }}</span>
                     {% endif %}
                 </strong>
-                <span class="text-secondary"><i class="far fa-heart">{{ blog.number_of_likes }}</i></span>
+                <span class="text-secondary">{{ blog.number_of_likes }}</i></span>
             </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
