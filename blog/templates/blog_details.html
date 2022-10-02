@@ -22,7 +22,25 @@
         <p class="card-text">{{ post.content | safe }}</p>
         <div class="row">
             <div class="col-2">
-                <i class="far fa-heart"><strong> {{ blog.number_of_likes }}</strong></i>
+                <strong>
+                    {% if user.is_authenticated %} 
+                    <form action="{% url blog_like' post.slug %}"  method="POST" class="d-line">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button class="btn-like" type="submit" name="blogpost_id" value="{{post.slug}}">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        {% else %}
+                        <button class="btn-like" type="submit" name="blogpost_id" value="{{post.slug}}">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        {% endif %}
+                    </form>
+                    {% else %}
+                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+                    {% endif %}
+                </strong>
+                <span class="text-secondary"><i class="far fa-heart">{{ blog.number_of_likes }}</i></span>
             </div>
             <div class="col-2">
                 {% with comments.count as total_comments %}
