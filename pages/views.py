@@ -38,7 +38,7 @@ class ContactPage(View):
                 form.save()
                 messages.success(request, "Redirect Succesful!")
                 return HttpResponseRedirect('/')
-        
+    
         context = {
             'name': name,
             'email': email,
