@@ -2,28 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail, BadHeaderError
 from django.views import generic, View
-from .models import About, Contact
+from .models import Contact
 from .forms import ContactForm
-
-
-class AboutSect(generic.ListView):
-    model = About
-    queryset = About.objects.filter(status=1)
-    template_name = 'about.html'
-
-
-class AboutDetail(View):
-   
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Blog.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        
-        return render(
-            request,
-            'about.html', {
-                'post': post,
-            },
-        )
 
 
 class ContactPage(View):
@@ -46,6 +26,10 @@ class ContactPage(View):
         }
 
         return render(request, "contact.html", context)
+
+
+def about(request):
+    return render(request, 'about.html')
 
 
 def frontpage(request):
