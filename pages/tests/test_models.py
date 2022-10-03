@@ -6,7 +6,7 @@ from pages.models import Contact
 class ContactTest(TestCase):
     """ Testing a Contact """
     def create_contact(
-        self, 
+        self,
         name='bob',
         email='bob@bob.com',
         body='hello there!'
