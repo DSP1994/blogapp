@@ -3,7 +3,7 @@ from django.urls import reverse, resolve
 from pages.views import contact, about, frontpage
 
 
-class TestUrls(TestCase):
+class TestPageUrls(TestCase):
     """ Test to see if the urls are loading properly """
 
     def test_blog_home_page(self):

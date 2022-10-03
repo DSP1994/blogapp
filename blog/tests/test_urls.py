@@ -3,7 +3,7 @@ from django.urls import reverse, resolve
 from blog.views import BlogList, BlogDetail, BlogLike
 
 
-class TestUrls(TestCase):
+class TestBlogUrls(TestCase):
     """ Test to see if the urls are loading properly """
 
     def test_blog_page_status_code(self):
