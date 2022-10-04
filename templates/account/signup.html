@@ -17,15 +17,15 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
   </header>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
+      <div class="col-md-8 mt-3 offset-md-2 content-txt">
         <p>{% blocktrans %}Already have an account? 
-          Then please <a href="{{ login_url }}">sign in</a>.
+          Then please <a href="{{ login_url }}" class="content-txt">sign in</a>.
           {% endblocktrans %}</p>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-md-2 content-txt">
           <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form | crispy }}

@@ -23,9 +23,9 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
                 <div class="card mb-4">
                     <div class="card-body">
                         <h2 class="card-header blog-title-txt text-shadow">{{ blog.title }}</h2>
-                        <p class="card-text h6 blog-txt">{{ blog.author }} | {{ blog.created_on}} </p>
-                        <p class="card-text blog-txt optdis">{{ blog.content | slice:":300" }}</p>
-                        <a href="{% url 'blog_details.html' blog.slug  %}" class="blog-txt-btn blog-hover blog-txt-btn">Read More &rarr;</a>
+                        <p class="card-text h6 content-txt">{{ blog.author }} | {{ blog.created_on}} </p>
+                        <p class="card-text content-txt optdis">{{ blog.content | slice:":300" }}</p>
+                        <a href="{% url 'blog_details.html' blog.slug  %}" class="content-txt-btn blog-hover blog-txt-btn">Read More &rarr;</a>
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3%}
