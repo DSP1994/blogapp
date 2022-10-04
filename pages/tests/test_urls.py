@@ -10,14 +10,8 @@ class TestPageUrls(TestCase):
         """ Test to see if the home page loads correctly """
         response = self.client.get('')
         self.assertEqual(response.status_code, 200)
-    
-    def test_blog_contact_page(self):
-        """ Test to see if the contact me page loads correctly """
-        response = self.client.get('/contact/')
-        self.assertEqual(response.status_code, 200)
-    
+
     def test_blog_about_me(self):
         """ Test to see if the about section page loads correctly """
         response = self.client.get('/about/')
         self.assertEqual(response.status_code, 200)
-
