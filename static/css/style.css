@@ -187,6 +187,20 @@ p {
 .link-txt{
     color: var(--green)!important;
 }
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
+
 /* ------------------------ Comments ------------------------*/
 
 h3{
