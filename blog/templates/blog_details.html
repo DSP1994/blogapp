@@ -19,7 +19,9 @@
         {% endif %}        
     </div>
     <div class="card-body col-md-8">
-        <p class="card-text content-txt">{{ post.content | safe }}</p>
+        <p class="card-text content-txt">
+            {{ post.content | safe }}
+        </p>
         <div class="row">
             <div class="col-2">
                 <strong>
@@ -37,13 +39,19 @@
                         {% endif %}
                     </form>
                     {% else %}
-                    <span class="text-secondary"><i class="far fa-heart"></i></span><span class="text-secondary">{{ post.number_of_likes }}</span>
+                    <span class="text-secondary"><i class="far fa-heart"></i></span>
                     {% endif %}
+                    <strong class="text-secondary content-txt">
+                        {{ post.number_of_likes }}
+                    </strong>
                 </strong>
             </div>
-            <div class="col-4">
+            <div class="col-2">
                 {% with comments.count as total_comments %}
-                <i class="far fa-comments"><strong> {{ total_comments }}</strong></i>
+                <strong class="text-secondary content-txt">
+                    <i class="far fa-comments"></i>
+                    {{ total_comments }}
+                </strong>
                 {% endwith %}
             </div>
         </div>
