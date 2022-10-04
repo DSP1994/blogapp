@@ -16,9 +16,10 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
         </div>
     </header>
     <div class="container overflow-auto">
+        {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
         <div class="row">
             <!-- Blog Entries Column -->
-            <div class="col-md-6 mr-5 mt-3 left">
+            <div class="col-md-8 offset-md-2 mt-5">
                 {% for blog in blog_list %}
                 <div class="card mb-4">
                     <div class="card-body">
@@ -34,7 +35,6 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
                 {% endif %} 
                 {% endfor %}
             </div>
-            {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
         </div>
         {% if is_paginated %}
         <nav aria-label="Page navigation"> <!-- Page Navigation -->

@@ -45,6 +45,11 @@ p, a, button {
 .nav-link:hover{
     border-bottom: .05rem solid #333;
 }
+
+.nav-txt{
+    color: #000000!important;
+    font-weight: 500!important;
+}
 /* ------------------------ Footer Section ------------------------*/
 
 .ft-text{
@@ -213,6 +218,7 @@ h4{
 /* ------------------------ SideBar ------------------------*/
 
 .sidebar-title{
+    font-size: 2rem;
     color: var(--green);
 }
 
@@ -355,12 +361,20 @@ h4{
   }
 
 /* ------------------------ **MEDIA** ------------------------*/
-/* Sm. Devices (tablets, 768px and up */
+/* Sm. Devices (768px and down */
 @media (max-width: 768px){
     div.optdis{
         display: none;
     }
     p.optdis{
+        display: none;
+    }
+}
+
+/* Md Devices*/
+
+@media (max-width: 992px){
+    div.optdis{
         display: none;
     }
 }

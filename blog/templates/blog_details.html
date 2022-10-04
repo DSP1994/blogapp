@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="card-body col-md-12">
+        <div class="card-body col-md-8">
             {% if new_comment %}
             <div class="alert alert-success" role="alert">
                 Your Comment Is Awaiting Approval
@@ -81,10 +81,10 @@
             {% else %}
             {% if user.is_authenticated %}
             <h4>Leave a comment:</h4>
-            <form method="post" class="md-12">
+            <form method="post" class="md-8">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg mt-2">Submit</button>
             </form>
             {% else %}
             <p class="col-md-10 content-txt">Please <a href="{% url 'account_login' %}" class="content-txt">login</a> or 
