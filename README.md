@@ -2,7 +2,7 @@
 
 ## **Code Institute Project 4**
 ***
-To create a blog that has the ability to allow site users to comment and like/unlikes individual blogs.
+To create a blog that has the ability to allow site users to comment and like/unlike individual blogs.
 ***
 
 ![Multi Screen Image](readme-content/images/Multi-Screen-Mockup.png)
