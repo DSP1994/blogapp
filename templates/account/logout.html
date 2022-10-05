@@ -4,19 +4,19 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}{% trans "Log Out" %}{% endblock %}
 
 {% block content %}
 <div class="bg-image text-center shadow-1-strong rounded" 
 style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg); height: 100vh; width: 100%; background-size: cover;">
   <header class="header">
       <div class="overlay">
-        <h1>{% trans "Sign Out" %}</h1>
+        <h1>{% trans "Log Out" %}</h1>
       </div>
   </header>
   <div class="container">
       <div class="col-md-12">
-          <p class="mt-5 content-txt">{% trans 'Are you sure you want to sign out?' %}</p>
+          <p class="mt-5 content-txt">{% trans 'Are you sure you want to Log out?' %}</p>
       </div>
     </div>
     <div class="container">
@@ -27,7 +27,7 @@ style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v16
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
             {% endif %}
-            <button class="lo-txt-btn lo-hover" type="submit">{% trans 'Sign Out' %}</button>
+            <button class="lo-txt-btn lo-hover" type="submit">{% trans 'Log Out' %}</button>
           </form> 
         </div>
       </div>
