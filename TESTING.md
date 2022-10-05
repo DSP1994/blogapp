@@ -84,13 +84,13 @@
     - Cause = Typo
         - Fix = Within [base.html](/templates/base.html) on line 70, instead of `message` added an `s` to make it `messages`.
 
-- Finally, there were a number of other syntax errors, where there were multiple lines of code with typo's inside them, but I've selected a small number to indicate that I am able to read the error pages correctly, and single out the section of code that needs to be ammended.
+- Finally, there were a number of other syntax errors, where there were multiple lines of code with typo's inside them, but I've selected a small number to indicate that I am able to read the error pages correctly, and single out the section of code that needs to be amended.
 
 ***
 ## **Lighthouse**
 ![Lighthouse](readme-content/testing/images/Lighthouse.png)
 
-As I already mentioned in my [Personal Thoughts](README.md) within my README.md section, I am aware that there is a lot that can be done to improve this website. Given time to do so, I believe I'd be able to make the correct adjustments to ensure that all four sections, Perfomrance, Accessibility, Best Practices and SEO were all in the green.
+As I already mentioned in my [Personal Thoughts](README.md) within my README.md section, I am aware that there is a lot that can be done to improve this website. Given time to do so, I believe I'd be able to make the correct adjustments to ensure that all four sections, Performance, Accessibility, Best Practices and SEO were all in the green.
 
 Unfortunately time is something I am lacking. Though if I was given the opportunity, I would look into reducing the file sizes of the background images, as this was one of the issues that was brought up within the 'Performance' section. 
 ***
