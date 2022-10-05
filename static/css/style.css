@@ -5,6 +5,7 @@
     --green: #1a5c2a;
     --red:#9a2626;
     --black: #000000;
+    --l-green:#31a44e;
 }
 
 html{
@@ -78,7 +79,7 @@ p, a, button {
 }
 
 .fp-text{
-    color: var(--green);
+    color: var(--l-green);
     font-weight: 600;
     font-size: 1.5rem;
 }
