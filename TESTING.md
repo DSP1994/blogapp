@@ -16,7 +16,9 @@
 
 ***
 ## Lighthouse
+![Lighthouse](readme-content/testing/images/Lighthouse.png)
 
+As I already mentioned in my [Personal Thoughts](#personal-thoughts)
 ***
 ## Validators
 
