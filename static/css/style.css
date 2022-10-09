@@ -64,12 +64,6 @@ p, a, button {
 
 /* ------------------------ Overflow Sections ------------------------ */
 
-.overflow-auto{
-    overflow-y: scroll;
-    min-height: 0px;
-    height: 60vh;  
-}
-
 /* ------------------------ Front Page Section ------------------------*/
 
 .fp-title-text{
