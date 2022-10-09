@@ -84,7 +84,7 @@
             <form method="post" class="md-8">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary btn-lg mt-2">Submit</button>
+                <button type="submit" class="btn btn-lg mt-2 content-txt content-txt-btn">Submit</button>
             </form>
             {% else %}
             <p class="col-md-10 content-txt">Please <a href="{% url 'account_login' %}" class="content-txt">login</a> or 
