@@ -363,7 +363,7 @@ h4{
   }
 
 /* ------------------------ **MEDIA** ------------------------*/
-/* Sm. Devices (768px and down */
+/* Sm. Devices */
 @media (max-width: 768px){
     div.optdis{
         display: none;
@@ -373,10 +373,17 @@ h4{
     }
 }
 
-/* Md Devices*/
+/* Medium Devices */
 
 @media (max-width: 992px){
     div.optdis{
         display: none;
+    }
+}
+
+/* Larger Devices */
+@media (max-width: 1280px){
+    #Dave{
+        height: 75vh;
     }
 }
