@@ -380,10 +380,3 @@ h4{
         display: none;
     }
 }
-
-/* Larger Devices */
-@media (max-width: 1280px){
-    #Dave{
-        height: 75vh;
-    }
-}
