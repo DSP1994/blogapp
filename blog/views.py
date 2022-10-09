@@ -13,7 +13,7 @@ class BlogList(generic.ListView):
 
 
 class BlogDetail(View):
-   
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Blog.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -21,7 +21,7 @@ class BlogDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         return render(
             request,
             'blog_details.html',
@@ -33,7 +33,7 @@ class BlogDetail(View):
                 'comment_form': CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
         queryset = Blog.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -41,7 +41,7 @@ class BlogDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
@@ -52,7 +52,7 @@ class BlogDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
-        
+
         return render(
             request,
             'blog_details.html',
@@ -74,5 +74,5 @@ class BlogLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('blog_details.html', args=[slug]))
