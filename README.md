@@ -448,7 +448,8 @@ I'd also like to mention my Mentor, Spencer Barriball. He is an extremely knowle
   - Django docs
   - Bootstrap Docs
   - Code Institute
-  - W3Schools 
+  - W3Schools
+  - YouTube Channels (too many to remember, but a really good source of information!)
 
 
 ***    
