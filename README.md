@@ -100,13 +100,36 @@ For me, the best way to manage my ideas, and help my organise what I wanted to i
 ### **Skeleton**
 #### **Wireframes**
 The wireframes for the website where designed on paper. I originally wanted to use Balsamiq for this, however I personally perfer pen to paper when designing something. Though I am not the worldest greatest artist, I feel like ideas flow easier.
-* [Front Page]()
-* [About Page]()
-* [Blog Page]()
-* [Blog Details Page]()
-* [Log In]()
-* [Log Out]()
-* [Sign Up]()
+
+* **Front Page**
+![Front Page](readme-content/images/wireframe/1.%20FrontPage-DT.jpg)
+
+* **About Page**
+![About Page](readme-content/images/wireframe/4.%20About-DT.jpg)
+
+* **Blog Page**
+![Blog Page](readme-content/images/wireframe/2.%20Blog-DT.jpg)
+
+* **Blog Details Page**
+![Blog Details Page](readme-content/images/wireframe/3.%20BlogDets-DT.jpg)
+
+* **Log In Page**
+![Log In](readme-content/images/wireframe/6.%20Log%20in-DT.jpg)
+
+* **Log Out Page**
+![Log Out](readme-content/images/wireframe/7.%20Log%20out-DT.jpg)
+
+* **Sign Up**
+![Sign Up](readme-content/images/wireframe/5.%20SignUp-DT.jpg)
+
+* **Mobile Device / Front Page - Blog Section**
+![Mobile Device 1](readme-content/images/wireframe/8.%20FP-Blog-MD.jpg)
+
+* **Mobile Device / Blog Details - About Section**
+![Mobile Device 2](readme-content/images/wireframe/9.%20BlogDets-About-MD.jpg)
+
+* **Mobile Device / Log In/Out - Sign Up Section**
+![Mobile Device 3](readme-content/images/wireframe/10.%20Signup-Login-out-MD.jpg)
 
 ### **Surface**  
 #### **Colour Scheme**
@@ -392,7 +415,14 @@ Congratualations, you've deployed your site!
 - Javascript
   - Custom use minimal.
 
-***    
+***
+## **Honourable Mentions**
+
+As a final section to this README.md I'd like to mention two people in particular. First off, my partner, Sabina, for being my shoulder to lean on after being told to restart my entire project that I'd worked so hard on. She was really there for me and helped me pick myself back up and look at the project with fresh eyes.
+
+I'd also like to mention my Mentor, Spencer Barriball. He is an extremely knowledgeable mentor and really helped put my mind at ease when I started to panic. He also set aside some personal time to go through some sections of my code that I was really struggling with. For that I am extremely grateful. He has easily saved me hours of researching and pulling my own hair out!
+
+*** 
 ## **Credits**
 - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
   - Version 4.6.1, CSS framework for building a responsive front end, quickly. Comes with built-in javascript for features like the collapsable navbar, and accordion FAQs section.
@@ -419,8 +449,6 @@ Congratualations, you've deployed your site!
   - Bootstrap Docs
   - Code Institute
   - W3Schools 
-
-## **Honourable Mentions**
 
 
 ***    

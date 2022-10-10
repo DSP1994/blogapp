@@ -119,7 +119,7 @@ I was unable to find a reliable, none virus riddled website that was able to che
 ### **Python**
 ![PEP8](readme-content/testing/images/PEP8.png)
 
-Unforunately PEP8 online, seemed to be down at the time of doing my checks, and I was not able to use it. This is unfortunate as I checked multiple times before submitting my Project.
+Unforunately PEP8 online, seemed to be down at the time of doing my checks, and I was not able to use it. This is unfortunate as I checked multiple times before submitting my Project. However to ensure that my code was up to standard, I used the 'problems' section from my terminal and went through each page individually. There are some 'line too long' errors within my migrated files, however I thought it best to leave them as they were, I didn't want to mess them up. I also found that one of the lines in settings.py (160) is also too long, however when I placed a backslah (\) in the code to split it onto the next line, I found that Heroku didn't like this and wouldn't load my app. So again, I have left it as it is, and hope that my explanation is enough as to why it's been left in.
 
 ***
 
