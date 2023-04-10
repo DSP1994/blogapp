@@ -10,7 +10,7 @@ class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-admin.register(Post)
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     search_fields = ('title', 'content')
     list_display = ('title', 'slug', 'status', 'created_on')
