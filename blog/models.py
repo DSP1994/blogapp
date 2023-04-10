@@ -31,6 +31,26 @@ class Blog(models.Model):
         return self.likes.count()
 
 
+class Post(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = AutoSlugField(
+        populate_from='title',
+        max_length=200,
+        unique=True,
+        name='slug',
+        editable=True)
+    author = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='author')
+    updated_on = models.DateTimeField(auto_now=True)
+    image = CloudinaryField('image', default='placeholder')
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+
+
+
 class Comment(models.Model):
 
     blog = models.ForeignKey(
