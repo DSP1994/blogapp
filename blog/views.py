@@ -66,6 +66,13 @@ class BlogDetail(View):
         )
 
 
+class AddPost(generic.CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+    success_url = reverse_lazy('home')
+
+
 class BlogLike(View):
     def post(self, request, slug):
         post = get_object_or_404(Blog, slug=slug)
