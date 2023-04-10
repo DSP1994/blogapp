@@ -68,6 +68,18 @@ class BlogDetail(View):
         )
 
 
+class PostDetail(View):
+    def get(self, request, slug, *args, **kwargs):
+        template_name = 'open_post.html'
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+
+    def post(self, request, slug, *args, **kwargs):
+        template_name = 'open_post.html'
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+
+
 class AddPost(generic.CreateView):
     model = Post
     form_class = PostForm
