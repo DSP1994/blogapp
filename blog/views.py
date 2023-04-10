@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Blog
+from .models import Blog, Post
 from .forms import CommentForm
+from django.urls import reverse_lazy, reverse
+from django.contrib.auth.models import User
 
 
 class BlogList(generic.ListView):
@@ -83,7 +85,7 @@ class UpdateView(generic.UpdateView):
 class DeleteView(generic.DeleteView):
     model = Post
     template_name = 'delete_post.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('blog')
 
 
 class BlogLike(View):
