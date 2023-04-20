@@ -37,6 +37,14 @@
                                 <p>{{ post.excerpt | safe }}</p>
                                 <h5>{{ post.author }} | {{ post.created_on}} </h5>
                             </div>
+                            {% if 'placeholder' in post.image.url %}
+                            <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg"
+                                class="card-img-top" alt="Main Image">
+                            {% else %}
+                            <img class="card-img-top img-responsive fit-image" alt="card image"
+                                src="{{ post.image.url }}">
+                            {% endif %}
+
                             <p class="card-text">{{post.content | slice:":200" | safe }}</p>
                         </div>
                     </div>
