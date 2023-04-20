@@ -3,6 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+{% if user.is_authenticated %}
+{% if user.id == post.author.id %}
 <div class="container d-flex justify-content-center align-items-center h-100">
     <div class="text-center">
         <div class="container-fluid">
@@ -24,6 +26,16 @@
                 </div>
             </div>
         </div>
+        {% else %}
+        <div>
+            <h2 class="wrong-user">Oops, looks like you are the wrong user. Please sign in.</h2>
+        </div>
+        {% endif %}
+        {% else %}
+        <div>
+            <h2 class="wrong-user">Oops, looks like you are the wrong user. Please sign in.</h2>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
