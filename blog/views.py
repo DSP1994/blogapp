@@ -68,6 +68,12 @@ class BlogDetail(View):
         )
 
 
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'post.html'
+    paginate_by = 3
+
+
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         template_name = 'open_post.html'
