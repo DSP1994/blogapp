@@ -1,64 +1,72 @@
 /* ------------------------ Base Colors ------------------------*/
 
-:root{
+:root {
     --white: #FFFFFF;
     --green: #1a5c2a;
-    --red:#9a2626;
+    --red: #9a2626;
     --black: #000000;
-    --l-green:#31a44e;
+    --l-green: #31a44e;
 }
 
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     background-color: var(--white);
     font-family: 'Open Sans';
 }
 
 /* ------------------------ Headers/Paragraphs ------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Lobster', cursive !important;
     font-size: 3rem;
 }
 
-p, a, button {
+p,
+a,
+button {
     font-family: 'Open Sans', sans-serif !important;
 }
 
 /* ------------------------ Navigation Section ------------------------*/
 
-.nav-shadow{
-    box-shadow: 0 1rem 3rem #E3E7EB    
+.nav-shadow {
+    box-shadow: 0 1rem 3rem #E3E7EB
 }
 
-.nav-light{
+.nav-light {
     background-color: var(--white);
 }
 
-.navbar-brand{
-    margin-left: 1rem!important;
-    font-weight: bold!important;    
+.navbar-brand {
+    margin-left: 1rem !important;
+    font-weight: bold !important;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     border-bottom: .05rem solid #333;
 }
 
-.nav-txt{
-    color: #000000!important;
-    font-weight: 500!important;
+.nav-txt {
+    color: #000000 !important;
+    font-weight: 500 !important;
 }
+
 /* ------------------------ Footer Section ------------------------*/
 
-.ft-text{
+.ft-text {
     font-weight: 600;
 }
 
-.social-txt{
-    color: var(--green)!important;
+.social-txt {
+    color: var(--green) !important;
     font-size: larger;
 }
 
@@ -66,20 +74,20 @@ p, a, button {
 
 /* ------------------------ Front Page Section ------------------------*/
 
-.fp-title-text{
+.fp-title-text {
     color: var(--green);
     font-weight: bold;
     font-size: 3rem;
 }
 
-.fp-text{
+.fp-text {
     color: var(--l-green);
     font-weight: 600;
     font-size: 1.5rem;
     text-shadow: 2px 2px 2px lightgrey;
 }
 
-.fp-txt-btn{
+.fp-txt-btn {
     color: var(--green);
     font-weight: 600;
     font-size: 1.25rem;
@@ -104,58 +112,59 @@ p, a, button {
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-    .fp-hover:hover {
-        box-shadow: inset 100px 0 0 0 var(--red);
-        color: white;
-  }
+}
+
+.fp-hover:hover {
+    box-shadow: inset 100px 0 0 0 var(--red);
+    color: white;
+}
 
 /* ------------------------ Blog Section ------------------------*/
 
 header {
-	text-align: center;
-	width: 100%;
-	height: auto;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-	overflow: hidden;
-	border-radius: 0 0 85% 85% / 30%;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 30%;
 
 }
 
-header .overlay{
-	width: 100%;
-	height: 100%;
-	padding: 50px;
-	color: #FFF;
-	text-shadow: 1px 1px 1px #333;
-    background-image: linear-gradient( 360deg, #1a5c2a 10%, #FFFFFF 100%);
-	
+header .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient(360deg, #1a5c2a 10%, #FFFFFF 100%);
+
 }
 
 h1 {
-	margin-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
 
 }
 
 p {
-	margin-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
 }
 
-.blog-title-txt{
+.blog-title-txt {
     color: var(--green);
     font-size: 1.2rem;
-    
+
 }
 
-.content-txt{
-    color: var(--green)!important;
+.content-txt {
+    color: var(--green) !important;
     font-size: 1rem;
     font-weight: 600;
 }
 
-.content-txt-btn{
+.content-txt-btn {
     color: var(--green);
     font-weight: 600;
     font-size: 1rem;
@@ -179,14 +188,15 @@ p {
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-    .blog-hover:hover {
-        box-shadow: inset 100px 0 0 0 var(--red);
-        color: white;
-  }
+}
 
-.link-txt{
-    color: var(--green)!important;
+.blog-hover:hover {
+    box-shadow: inset 100px 0 0 0 var(--red);
+    color: white;
+}
+
+.link-txt {
+    color: var(--green) !important;
 }
 
 .btn-like {
@@ -204,25 +214,26 @@ p {
 
 /* ------------------------ Comments ------------------------*/
 
-h3{
+h3 {
     font-size: 2rem;
 }
-h4{
+
+h4 {
     font-size: 2rem;
 }
 
 /* ------------------------ SideBar ------------------------*/
 
-.sidebar-title{
+.sidebar-title {
     font-size: 2rem;
     color: var(--green);
 }
 
-.sidebar-txt{
+.sidebar-txt {
     color: var(--green);
 }
 
-.sidebar-btn{
+.sidebar-btn {
     display: inline-block;
     font-weight: 600;
     text-align: center;
@@ -236,28 +247,41 @@ h4{
     border-radius: 0.25rem;
     color: var(--red);
     background-color: var(--black);
-    
+
 }
-.sidebar-btn:hover{
+
+.sidebar-btn:hover {
     color: white;
 }
 
 /* ------------------------ About Section ------------------------*/
 
-.about-title{
+.about-title {
     color: var(--green);
     font-size: 2.5rem;
 }
 
-.about-txt{
+.about-txt {
     color: var(--green);
     font-size: 1.2rem;
     font-weight: 600;
 }
 
+/* ------------------------ Posts Section -------------------------- */
+
+.incorrect-user {
+    text-align: center;
+    display: flex;
+    width: 50%;
+    height: 200px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ------------------------ Register Section ------------------------*/
 
-.rg-txt-btn{
+.rg-txt-btn {
     color: var(--green);
     font-weight: 600;
     font-size: 1.5rem;
@@ -282,16 +306,17 @@ h4{
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-    .rg-hover:hover {
-        box-shadow: inset 100px 0 0 0 var(--red);
-        color: white;
-  }
+}
+
+.rg-hover:hover {
+    box-shadow: inset 100px 0 0 0 var(--red);
+    color: white;
+}
 
 
 /* ------------------------ Log In Section ------------------------*/
 
-.li-txt-btn{
+.li-txt-btn {
     color: var(--green);
     font-weight: 600;
     font-size: 1.5rem;
@@ -316,16 +341,17 @@ h4{
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-    .li-hover:hover {
-        box-shadow: inset 100px 0 0 0 var(--red);
-        color: white;
-  }
+}
+
+.li-hover:hover {
+    box-shadow: inset 100px 0 0 0 var(--red);
+    color: white;
+}
 
 
 /* ------------------------ Log Out Section ------------------------*/
 
-.lo-txt-btn{
+.lo-txt-btn {
     color: var(--green);
     font-weight: 600;
     font-size: 1.5rem;
@@ -350,27 +376,29 @@ h4{
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-    .lo-hover:hover {
-        box-shadow: inset 100px 0 0 0 var(--red);
-        color: white;
-  }
+}
+
+.lo-hover:hover {
+    box-shadow: inset 100px 0 0 0 var(--red);
+    color: white;
+}
 
 /* ------------------------ **MEDIA** ------------------------*/
 /* Sm. Devices */
-@media (max-width: 768px){
-    div.optdis{
+@media (max-width: 768px) {
+    div.optdis {
         display: none;
     }
-    p.optdis{
+
+    p.optdis {
         display: none;
     }
 }
 
 /* Medium Devices */
 
-@media (max-width: 992px){
-    div.optdis{
+@media (max-width: 992px) {
+    div.optdis {
         display: none;
     }
 }
