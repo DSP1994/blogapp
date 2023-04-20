@@ -18,6 +18,13 @@
                     </h5>
 
                 </div>
+                {% if 'placeholder' in post.image.url %}
+                <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg"
+                    class="card-img-top" alt="Main Image">
+                {% else %}
+                <img alt="card-img-top" src="{{ post.image.url }}">
+                {% endif %}
+
                 <div class="profile-posts">{{ post.content | safe }}</div>
             </div>
         </div>
