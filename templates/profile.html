@@ -28,6 +28,8 @@
             </div>
             <div class="container-fluid">
                 <div class="row">
+                    {% for post in post_list %}
+                    {% if post.author == user  %}
                     <div class="col-md-6 col-lg-4 post-card">
                         <div class="card">
                             <div class="post-header">
@@ -48,6 +50,8 @@
                             <p class="card-text">{{post.content | slice:":200" | safe }}</p>
                         </div>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
 
