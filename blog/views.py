@@ -80,10 +80,22 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
 
+        return render(
+            request,
+            'open_post.html',
+            {'post': post}
+        )
+
     def post(self, request, slug, *args, **kwargs):
         template_name = 'open_post.html'
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            'open_post.html',
+            {'post': post}
+        )
 
 
 class AddPost(generic.CreateView):
