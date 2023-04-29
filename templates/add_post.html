@@ -3,21 +3,27 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container-fluid d-flex justify-content-center align-items-center">
-    <div class="row col-md-6 text-center">
-        <div>
-            <h2 class="text-center">Create Your Post Here</h2>
+<div class="text-center shadow-1-strong rounded">
+    <header class="header">
+        <div class="overlay">
+            <h1>
+                Create Your Post Here!
+            </h1>
         </div>
-        <div class="form-group">
-            <form method="POST" enctype="multipart/form-data" class="add-post-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-success button-alt">Publish</button>
-                <script>
-                    let username = "{{ user.id }}";
-                    document.getElementById("formAuth").value = username;
-                </script>
-            </form>
+    </header>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="row col-md-6 text-center">
+            <div class="form-group">
+                <form method="POST" enctype="multipart/form-data" class="add-post-form mt-3">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-success button-alt m-2">Publish</button>
+                    <script>
+                        let username = "{{ user.id }}";
+                        document.getElementById("formAuth").value = username;
+                    </script>
+                </form>
+            </div>
         </div>
     </div>
 </div>
