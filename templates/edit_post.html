@@ -5,35 +5,41 @@
 {% block content %}
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
-<div class="container-fluid d-flex justify-content-center align-items-center">
-    <div class="row col-md-6 text-center">
-        <div>
+<div class="text-center shadow-1-strong rounded">
+    <header class="header">
+        <div class="overlay">
             <h2 class="text-center">Edit Your Post</h2>
         </div>
-        <div class="form-group">
-            <form action="" method="POST" enctype="multipart/form-data" class="add-post-form">
-                {% csrf_token %}
-                {{ form|crispy }}
+    </header>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="row col-md-6 text-center">
+            <div class="form-group mt-2">
+                <form action="" method="POST" enctype="multipart/form-data" class="add-post-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
 
-                <button type="submit" class="btn btn-success button-alt">Update</button>
-                <button type="button" class="btn btn-danger link-unstyled button-alt"><a
-                        href="{% url 'delete_post' post.slug%}">Delete</a></button>
-            </form>
-            <script type="text/javascript">
-                let username = "{{ user.id }}";
-                document.getElementById("formAuth").value = username;
-            </script>
+                    <button type="submit"
+                        class="button-alt mt-2 mr-2 content-txt-btn blog-hover blog-txt-btn">Update</button>
+                    <button type="button"
+                        class="link-unstyled button-alt mt-2 ml-2 content-txt-btn blog-hover blog-txt-btn"><a
+                            href="{% url 'delete_post' post.slug%}"><strong>Delete</strong></a></button>
+                </form>
+                <script type="text/javascript">
+                    let username = "{{ user.id }}";
+                    document.getElementById("formAuth").value = username;
+                </script>
+            </div>
         </div>
     </div>
+    {% else %}
+    <div>
+        <h2 class="incorrect-user">Looks like you're not the creator of this post. Please log in.</h2>
+    </div>
+    {% endif %}
+    {% else %}
+    <div>
+        <h2 class="incorrect-user">Looks like you're not the creator of this post. Please log in.</h2>
+    </div>
+    {% endif %}
 </div>
-{% else %}
-<div>
-    <h2 class="incorrect-user">Looks like you're not the creator of this post. Please log in.</h2>
-</div>
-{% endif %}
-{% else %}
-<div>
-    <h2 class="incorrect-user">Looks like you're not the creator of this post. Please log in.</h2>
-</div>
-{% endif %}
 {% endblock %}
