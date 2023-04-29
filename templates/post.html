@@ -3,42 +3,55 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        {% for post in post_list %}
-        <div class="col-md-6 col-lg-4 post-card">
-            <div class="card mt-2">
-                <div class="post-header">
-                    <a href="{% url 'open_post' post.slug  %}" class="btn">
-                        <h2>{{ post.title }}</h2>
-                    </a>
-                    <h5>{{ post.author }} | {{ post.created_on}}</h5>
-                </div>
-                {% if 'placeholder' in post.image.url %}
-                <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg"
-                    class="card-img-top" alt="Main Image">
-                {% else %}
-                <img class="card-img-top img-responsive fit-image" alt="card image" src="{{ post.image.url }}">
-                {% endif %}
-
-                <div class="profile-posts">{{ post.content | slice:":100" | safe }}</div>
-            </div>
+<div class="bg-image text-center shadow-1-strong rounded"
+    style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664463653/leone-venter-pVt9j3iWtPM-unsplash_dmqcbp.jpg); height: auto; max-width: 100%; background-size: cover;">
+    <header class="header">
+        <div class="overlay">
+            <h1>
+                Welcome To Your Posts
+            </h1>
+            <p>
+                I hope you enjoy your read!
+            </p>
         </div>
-        {% endfor %}
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            {% for post in post_list %}
+            <div class="col-md-6 col-lg-4 post-card">
+                <div class="card mt-2">
+                    <div class="post-header">
+                        <a href="{% url 'open_post' post.slug  %}" class="btn">
+                            <h2>{{ post.title }}</h2>
+                        </a>
+                        <h3>{{ post.author }} | {{ post.created_on}}</h3>
+                    </div>
+                    {% if 'placeholder' in post.image.url %}
+                    <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg"
+                        class="card-img-top" alt="Main Image">
+                    {% else %}
+                    <img class="card-img-top img-responsive fit-image" alt="card image" src="{{ post.image.url }}">
+                    {% endif %}
+
+                    <div class="profile-posts mt-2"><strong>{{ post.content | slice:":1000" | safe }}</strong></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+        <nav aria-label="Page navigation" class="mt-2">
+            <!-- Page Navigation -->
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link link-txt">&laquo; PREV </a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link link-txt"> NEXT &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <!-- Page Navigation -->
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link link-txt">&laquo; PREV </a>
-            </li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link link-txt"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
 {% endblock %}
