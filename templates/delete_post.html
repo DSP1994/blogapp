@@ -5,37 +5,47 @@
 {% block content %}
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
-<div class="container d-flex justify-content-center align-items-center h-100">
-    <div class="text-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div>
-                    <h2>DELETE</h2>
-                </div>
-                <div class="form-group">
-                    <form action="" method="POST" enctype="multipart/form-data" class="add-post-form">
-                        {% csrf_token %}
-                        <strong>Are you sure you want to delete your post<h4>{{ post.title }}?</h4></strong>
-
-                        <button type="submit" class="btn btn-danger button-alt">Delete</button>
-                        <script>
-                            let username = "{{ user.id }}";
-                            document.getElementById("formAuth").value = username;
-                        </script>
-                    </form>
+<div class="text-center shadow-1-strong rounded">
+    <header class="header">
+        <div class="overlay">
+            <h2 class="text-center">Delete Your Post?!</h2>
+        </div>
+    </header>
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="text-center">
+            <div class="container-fluid">
+                <div class="row mt-2">
+                    <div>
+                        <h2>DELETE</h2>
+                    </div>
+                    <div class="form-group">
+                        <form action="" method="POST" enctype="multipart/form-data" class="add-post-form">
+                            {% csrf_token %}
+                            </br>
+                            </br>
+                            <strong>Are you sure you want to delete your post<h3>{{ post.title }}?</h3></strong>
+                            </br>
+                            </br>
+                            <button type="submit" class="btn btn-danger button-alt">Delete</button>
+                            <script>
+                                let username = "{{ user.id }}";
+                                document.getElementById("formAuth").value = username;
+                            </script>
+                        </form>
+                    </div>
                 </div>
             </div>
+            {% else %}
+            <div>
+                <h2 class="wrong-user">Looks like you're not the creator of this post. Please sign in.</h2>
+            </div>
+            {% endif %}
+            {% else %}
+            <div>
+                <h2 class="wrong-user">Looks like you're not the creator of this post. Please sign in.</h2>
+            </div>
+            {% endif %}
         </div>
-        {% else %}
-        <div>
-            <h2 class="wrong-user">Looks like you're not the creator of this post. Please sign in.</h2>
-        </div>
-        {% endif %}
-        {% else %}
-        <div>
-            <h2 class="wrong-user">Looks like you're not the creator of this post. Please sign in.</h2>
-        </div>
-        {% endif %}
     </div>
 </div>
 {% endblock %}
