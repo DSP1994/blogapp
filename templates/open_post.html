@@ -3,29 +3,40 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="post-page post-card">
-            <div class="card">
-                <div class="post-header">
-                    <h2>{{ post.title }}</h2>
-                    <h5>{{ post.author }} | {{ post.created_on}}
-                        {% if user.is_authenticated %}
-                        {% if user.id == post.author.id %}
-                        <a href="{% url 'edit_post' post.slug%}" class="nav-link">Edit Post</a>
-                        {% endif %}
-                        {% endif %}
-                    </h5>
+<div class="bg-image text-center shadow-1-strong rounded"
+    style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664463653/leone-venter-pVt9j3iWtPM-unsplash_dmqcbp.jpg); height: auto; max-width: 100%; background-size: cover;">
+    <header class="header">
+        <div class="overlay">
+            <h1>
+                User Posts
+            </h1>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="post-page post-card">
+                <div class="card mt-2">
+                    <div class="post-header">
+                        <h2>{{ post.title }}</h2>
+                        <h3>{{ post.author }} | {{ post.created_on}}
+                            {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %}
+                            <a href="{% url 'edit_post' post.slug%}"
+                                class="nav-link content-txt-btn blog-hover blog-txt-btn">Edit Post</a>
+                            {% endif %}
+                            {% endif %}
+                        </h3>
 
+                    </div>
+                    {% if 'placeholder' in post.image.url %}
+                    <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg"
+                        class="card-img-top" alt="Main Image">
+                    {% else %}
+                    <img alt="card-img-top" src="{{ post.image.url }}">
+                    {% endif %}
+
+                    <div class="profile-posts mt-2 mb-2">{{ post.content | safe }}</div>
                 </div>
-                {% if 'placeholder' in post.image.url %}
-                <img src="https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg"
-                    class="card-img-top" alt="Main Image">
-                {% else %}
-                <img alt="card-img-top" src="{{ post.image.url }}">
-                {% endif %}
-
-                <div class="profile-posts">{{ post.content | safe }}</div>
             </div>
         </div>
     </div>
