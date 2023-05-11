@@ -6,7 +6,8 @@ To create a blog that has the ability to allow site users to comment and like/un
 ***
 
 # **_ReTake README Can Be Found Here_**
-[RetakeREADME.md](RetakeREADME.md)
+**[RetakeREADME.md](RetakeREADME.md)**
+***
 
 ![Multi Screen Image](readme-content/images/Multi-Screen-Mockup.png)
 ***
