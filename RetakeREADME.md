@@ -14,6 +14,7 @@ Due to my lack of understanding and ability in some areas of code, I was unable 
     - [Fix One](#fix-one)
     - [Fix Two](#fix-two)
     - [Fix Three](#fix-three)
+- **[Errors](#errors)**
 - **[Future Implications](#future-implications)**
 
 ## **Failings**
@@ -73,6 +74,16 @@ Below are screen shots of the new content that has been implimented into the app
 
 ***
 
+## **Errors**
+
+***
+CSS was not loading on the Live website, however it was applying itself when in the gitpod runserver command.
+
+![CSS](readme-content/retake/01%20-%20CSS%20not%20applying.png)
+![CSS Not Applying](readme-content/retake/02%20-%20CSS%20not%20applying%2C%20but%20works%20in%20github.png)
+![CSS MIME](readme-content/retake/03%20-%20CSS%20not%20applying%2C%20MIME.png)
+
+The fix for this was that debug was set to True in settings. Which would have been an automatic fail! However that is now set to False and everything works perfectly fine.
 
 ## **Future Implications**
 
