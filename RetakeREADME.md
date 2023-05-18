@@ -125,6 +125,7 @@ If I had been given longer to retake this Project (ideally if I had completed it
 - I would like the ability to allow users to access their drafts so they can edit and post them when they are ready too, rather than relying on the admin to post it for them.
 - I am unhappy with the size of the photos when a user clicks on the post, as it takes up the entire screen, unfortunately I am quickly running out of time to redo this project due to work commitments, but I am acknowledging that it does not look the best, and I would like to fix this given time.
 - I would also like to fix an issue where users are unable to do paragraphs in their posts. I am not sure why this is, I believe it is something to do with the crispy forms. But I could be wrong.
+- I would like to impliment a way to view your drafts on your own profile, without them being visible to anyone else, to then update them to published later. **For now, if you post a profile in draft, you will not see it unless in the admin panel, please only post when set to 'publish'**
 
 ## **Final Comments**
 
