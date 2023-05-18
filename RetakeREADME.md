@@ -112,7 +112,7 @@ This is the update validator;
 This is the delete validator;
 ![Validator](readme-content/retake/09.%20Validator%20Delete.png)
 
-
+It may be my lack of understanding, but after going through the templates within my code, to fix these errors, I noticed that where the majority read 'error' the line number associated with it was incorrect. For example on the 'post validator' screenshot is shows 'stray end tag', however when looking at my code within the post.html file, it shows that the '</ header>' is part of the correct section of code. As mentioned, this might be an oversight of my understanding, but I thought it best to make note of this.
 
 ## **Future Implications**
 
@@ -128,3 +128,6 @@ If I had been given longer to retake this Project (ideally if I had completed it
 
 ## **Final Comments**
 
+I understand that this resubmission is a little rough around the edges. I do believe that given more time, I would have been able to polish it off quite nicely. However with only 10 days allowed for resubmission, along with work commitments and an unfortunate leave of absence, I found this quite difficult, especially after not looking at the code for quite some time due to working on Project 5. I do believe though that I understand a lot more of why somethings behave the way they do, having done project five and then having to come back to this project.
+
+Thank you for taking the time to read this resubmission README.md file. I wish to thank my new Mentor Martina as well, as mentioned above for her extensive knowledge, and reassuring me about the future in the field of coding.
