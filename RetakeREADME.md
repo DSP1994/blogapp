@@ -16,6 +16,7 @@ Due to my lack of understanding and ability in some areas of code, I was unable 
     - [Fix Three](#fix-three)
 - **[Errors](#errors)**
 - **[Future Implications](#future-implications)**
+- **[Final Comments](#final-comments)**
 
 ## **Failings**
 ***
@@ -74,6 +75,10 @@ Below are screen shots of the new content that has been implimented into the app
 
 ***
 
+After talking to my mentor *Martina*, we came to the conclusion that this error must have been in relation to the first error upon which the examiner was not even able to access the site due to the error within the settings.py file. Due to this now being fixed, and a profile section being set up for people to join the site, this error is fixed. 
+
+I do have Martina's permission to mention her within my *'fix'* section, as proof we have tried to recreate the error to try and fix it, only to find out the error did not exist for us. As mentioned above, I believe that to be the reason why.
+
 ## **Errors**
 
 ***
@@ -94,3 +99,8 @@ If I had been given longer to retake this Project (ideally if I had completed it
 - the ability to click on someones comment to take you to their profile page
     - though I like to think this would be as simple as adding an < a > to the blog_details page by the 'comment.name', it is something I'd like to look into properly.
 - I would like the ability to allow users to access their drafts so they can edit and post them when they are ready too, rather than relying on the admin to post it for them.
+- I am unhappy with the size of the photos when a user clicks on the post, as it takes up the entire screen, unfortunately I am quickly running out of time to redo this project due to work commitments, but I am acknowledging that it does not look the best, and I would like to fix this given time.
+- I would also like to fix an issue where users are unable to do paragraphs in their posts. I am not sure why this is, I believe it is something to do with the crispy forms. But I could be wrong.
+
+## **Final Comments**
+
