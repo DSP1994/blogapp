@@ -1,15 +1,19 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 
-<div class="bg-image text-center shadow-1-strong rounded d-flex justify-content-center align-items-center" 
-style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg); height: 100vh; width: 100%; background-size: cover;">
-    <div class="card-body">
-        <h1 class="card-title fp-title-text">My First Blog</h1>
-        <p class="card-text fp-text">
-          Thank you for finding my blog! Please feel free to drop a comment about what you've enjoyed! 
-        </p>
-        <a href="{% url 'blog' %}" class="fp-hover fp-txt-btn">Get Started!</a>
-      </div>
+<div class="bg-image text-center shadow-1-strong rounded d-flex justify-content-center align-items-center"
+  style="background-image: url(https://res.cloudinary.com/dsp1994/image/upload/v1664203850/about-me-background_ygdwtk.jpg); height: 100vh; width: 100%; background-size: cover;">
+  <div class="card-body">
+    <h1 class="card-title fp-title-text">My First Blog</h1>
+    <p class="card-text fp-text">
+      Thank you for finding my blog! Please click on<a href="{% url 'post' %}" class="fp-hover fp-txt-btn">post</a>
+      in the header to view user blogs!
+    </p>
+    <p class="card-text fp-text">
+      Or alternatively press <a href="{% url 'blog' %}" class="fp-hover fp-txt-btn">blog</a>
+      to find ones I myself have done!
+    </p>
+  </div>
 </div>
 
 {% endblock content %}
