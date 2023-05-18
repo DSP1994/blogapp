@@ -15,6 +15,7 @@ Due to my lack of understanding and ability in some areas of code, I was unable 
     - [Fix Two](#fix-two)
     - [Fix Three](#fix-three)
 - **[Errors](#errors)**
+    - [W3C](#w3c)
 - **[Future Implications](#future-implications)**
 - **[Final Comments](#final-comments)**
 
@@ -89,6 +90,29 @@ CSS was not loading on the Live website, however it was applying itself when in 
 ![CSS MIME](readme-content/retake/03%20-%20CSS%20not%20applying%2C%20MIME.png)
 
 The fix for this was that debug was set to True in settings. Which would have been an automatic fail! However that is now set to False and everything works perfectly fine.
+
+Heroku was failing to load the site.
+![Heroku Fail](readme-content/retake/04%20-%20Heroku%20Failing%20To%20Load.png)
+A simple fix for this was to comment out the debug setting, after talking to a tutor, I believe this is something to do with django having it's own set of debugging tools when in production. If there is a more effecient way to fix this, I hope to find it for future projects.
+
+### **W3C**
+
+This first screenshot applied for the majority of the website, so instead of having multiple screenshots, I have left only this one in.
+![Validator](readme-content/retake/05.%20Validator.png)
+
+This is the profile validator;
+![Validator](readme-content/retake/06.%20Validator%20Profile.png)
+
+This is the post validator;
+![Validator](readme-content/retake/07.%20Validator%20Post.png)
+
+This is the update validator;
+![Validator](readme-content/retake/08.%20Validator%20Update.png)
+
+This is the delete validator;
+![Validator](readme-content/retake/09.%20Validator%20Delete.png)
+
+
 
 ## **Future Implications**
 
